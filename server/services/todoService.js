@@ -17,7 +17,8 @@ const todoService = {
   },
 
   deleteTodo: async function (todoId) {
-    return await TodoModel.findByIdAndDelete(todoId);
+    await TodoModel.findByIdAndDelete(todoId);
+    return await TodoModel.find();
   },
 };
 

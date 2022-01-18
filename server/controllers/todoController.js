@@ -38,8 +38,8 @@ const todoController = {
 
     todoService
       .deleteTodo(todoId)
-      .then(() => {
-        return res.status(200);
+      .then((todos) => {
+        return res.status(200).json(todos);
       })
       .catch(next);
   },

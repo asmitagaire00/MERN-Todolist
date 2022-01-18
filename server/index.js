@@ -33,5 +33,5 @@ app.delete("/todos/:todoId", todoController.deleteTodo);
 
 app.use((err, req, res, next) => {
   console.log("error: ", err);
-  res.status(500).json({ message: "Internaal server error" });
+  res.status(500).json({ message: "Internal server error" });
 });
